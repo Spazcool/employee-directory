@@ -1,0 +1,58 @@
+[ 
+    {
+        "role": "Manager",
+        "name": "Joe Smith",
+        "email": "joe@fakemail.com",
+        "id": 1,
+        "officeNumber": 1
+    },
+    { 
+        "role": "Engineer",
+        "name": "Doug Wright",
+        "email": "douglas.wrightii@gmail.com",
+        "id": 2,
+        "github": "Spazcool" 
+    },
+    { 
+        "role": "Engineer",
+        "name": "Neola Dunkin",
+        "email": "neola@fakemail.com",
+        "id": 3,
+        "github": "neola" 
+    },
+    { 
+        "role": "Engineer",
+        "name": "Madeline Lamour",
+        "email": "madeline@fakemail.com",
+        "id": 4,
+        "github": "madeline" 
+    },
+    {
+        "role": "Manager",
+        "name": "Adam MacBeth",
+        "email": "adam@fakemail.com",
+        "id": 5,
+        "officeNumber": 3 
+    },
+    {
+        "role": "Intern",
+        "name": "Dan Norris",
+        "email": "dan@fakemail.com",
+        "id": 6,
+        "school": "USM"
+    },
+    {
+        "role": "Intern",
+        "name": "Samantha Duplesis",
+        "email": "samantha@fakemail.com",
+        "id": 7,
+        "school": "UNH"
+    },
+    {
+        "role": "Intern",
+        "name": "David Bowdin",
+        "email": "david@fakemail.com",
+        "id": 8,
+        "school": "UMass Amherst"
+    }
+]
