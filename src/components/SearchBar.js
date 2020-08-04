@@ -1,7 +1,7 @@
 import React from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import {FaSearch} from 'react-icons/fa/'
+import {FaSearch} from 'react-icons/fa/';
 import '../App.css';
 
 class SearchBar extends React.Component{
