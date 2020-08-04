@@ -5,7 +5,10 @@ import '../App.css';
 class Table extends React.Component {
   state = {
     data : this.props.data,
-    sorted: ''
+    sorted: {
+      col: null,
+      dir: 'descending',
+    }
   };  
   
   createRow(datum, index){
@@ -22,7 +25,7 @@ class Table extends React.Component {
   }
 
   createHeader(list){
-    const listed = list.map((item) => (<th key={`${item}-header`}>{item}</th>));
+    const listed = list.map((item) => (<th key={`${item}-header`}>{item.toUpperCase()}</th>));
     return (
       <tr onClick={(event) => this.sortByCol(event.target.closest('th').innerText)}>
        {listed}
@@ -42,13 +45,29 @@ class Table extends React.Component {
       default:
         att = col.toLowerCase();
     }
-    //todo this is broken
-    const sorted = this.state.data === this.state.data.sort((a, b) => (a[att] > b[att]) ? 1 : - 1)
-      ? this.state.data.sort((a, b) => (a[att] < b[att]) ? 1 : + 1)
-      : this.state.data.sort((a, b) => (a[att] > b[att]) ? 1 : - 1);
-    console.log(sorted)
+
+    const dir = this.state.sorted.col 
+      ? (this.state.sorted.dir === 'ascending' ? 'descending' : 'ascending')
+      : 'descending';
+
+    const sortedData = this.state.data.sort((a, b) => {
+      if(att === 'id' || att === 'officenumber'){
+        return (a[att] > b[att]) ? 1 : - 1;
+      }else{
+        return (a[att].toLowerCase() > b[att].toLowerCase()) ? 1 : - 1
+      }
+    });
+
+    if(dir === 'descending'){
+      sortedData.reverse();
+    }
+    
     this.setState({
-      data: sorted
+      data: sortedData,
+      sorted: {
+        col: att,
+        dir
+      }
     });
   }
 

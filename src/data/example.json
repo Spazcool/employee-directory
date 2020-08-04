@@ -13,7 +13,7 @@
         "role": "Engineer",
         "name": "Doug Wright",
         "email": "douglas.wrightii@gmail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "Spazcool",
         "school": ""
     },
@@ -22,7 +22,7 @@
         "role": "Engineer",
         "name": "Neola Dunkin",
         "email": "neola@fakemail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "neola",
         "school": ""
     },
@@ -31,7 +31,7 @@
         "role": "Engineer",
         "name": "Madeline Lamour",
         "email": "madeline@fakemail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "madeline",
         "school": ""
     },
@@ -49,7 +49,7 @@
         "role": "Intern",
         "name": "Dan Norris",
         "email": "dan@fakemail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "",
         "school": "USM"
     },
@@ -58,7 +58,7 @@
         "role": "Intern",
         "name": "Samantha Duplesis",
         "email": "samantha@fakemail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "",
         "school": "UNH"
     },
@@ -67,7 +67,7 @@
         "role": "Intern",
         "name": "David Bowdin",
         "email": "david@fakemail.com",
-        "officeNumber": "",
+        "officeNumber": null,
         "github": "",
         "school": "UMass Amherst"
     }
