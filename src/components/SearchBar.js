@@ -13,6 +13,8 @@ class SearchBar extends React.Component{
           <InputGroup.Text id="inputGroup-sizing-default"><FaSearch/></InputGroup.Text>
         </InputGroup.Prepend>
         <FormControl
+          value={this.props.searchTerm}
+          onChange={this.props.handleInputChange}
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
         />

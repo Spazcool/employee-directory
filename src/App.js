@@ -8,6 +8,14 @@ import './App.css';
 import data from './data/example.json';
 
 class App extends React.Component{
+  state = {
+    searchTerm: ""
+  };
+
+  handleInputChange = (event) =>{
+    this.setState({ searchTerm: event.target.value });
+  };
+
   render(){
     return (
       <div className="App">
@@ -15,12 +23,15 @@ class App extends React.Component{
         <Container>
           <Row className="mt-2 mb-2">
             <Col>
-              <SearchBar />
+              <SearchBar
+                handleInputChange={this.handleInputChange}
+                searchTerm={this.state.searchTearm}  
+              />
             </Col>
           </Row>
           <Row className="mt-2 mb-2">
             <Col>
-              <Table data={data}/>
+              <Table data={data} searchTerm={this.state.searchTearm}/>
             </Col>
           </Row>
         </Container>
