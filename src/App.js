@@ -22,7 +22,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <Header />
-        <Container>
+        <Container className="wrapper">
           <Row className="mt-2 mb-2">
             <Col>
               <SearchBar

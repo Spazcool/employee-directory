@@ -70,5 +70,80 @@
         "officeNumber": null,
         "github": "",
         "school": "UMass Amherst"
-    }
+    },
+
+    {
+      "id": 1,
+      "role": "Manager",
+      "name": "Joe Smith",
+      "email": "joe@fakemail.com",
+      "officeNumber": 1,
+      "github": "",
+      "school": ""
+  },
+  { 
+      "id": 2,
+      "role": "Engineer",
+      "name": "Doug Wright",
+      "email": "douglas.wrightii@gmail.com",
+      "officeNumber": null,
+      "github": "Spazcool",
+      "school": ""
+  },
+  { 
+      "id": 3,
+      "role": "Engineer",
+      "name": "Neola Dunkin",
+      "email": "neola@fakemail.com",
+      "officeNumber": null,
+      "github": "neola",
+      "school": ""
+  },
+  { 
+      "id": 4,
+      "role": "Engineer",
+      "name": "Madeline Lamour",
+      "email": "madeline@fakemail.com",
+      "officeNumber": null,
+      "github": "madeline",
+      "school": ""
+  },
+  {
+      "id": 5,
+      "role": "Manager",
+      "name": "Adam MacBeth",
+      "email": "adam@fakemail.com",
+      "officeNumber": 3,
+      "github": "",
+      "school": ""
+  },
+  {
+      "id": 6,
+      "role": "Intern",
+      "name": "Dan Norris",
+      "email": "dan@fakemail.com",
+      "officeNumber": null,
+      "github": "",
+      "school": "USM"
+  },
+  {
+      "id": 7,
+      "role": "Intern",
+      "name": "Samantha Duplesis",
+      "email": "samantha@fakemail.com",
+      "officeNumber": null,
+      "github": "",
+      "school": "UNH"
+  },
+  {
+      "id": 8,
+      "role": "Intern",
+      "name": "David Bowdin",
+      "email": "david@fakemail.com",
+      "officeNumber": null,
+      "github": "",
+      "school": "UMass Amherst"
+  }
+
+
 ]

@@ -6,7 +6,7 @@ class Header extends React.Component{
   render(){
     return(
       <nav className="App-header">
-        <span><FaReact/> Employee Directory</span>
+        <span><FaReact className="App-logo"/> Employee Directory</span>
       </nav>
     )
   }

@@ -1,28 +1,47 @@
+html, body{
+  overflow-x: hidden;
+}
+
 body {
   background-color: #282c34;
 }
 
-.fuckshitup{
-  background-color: white;
+.wrapper{
+  margin-top: 8em;
+  overflow:auto;
+  padding-bottom: 5em;
 }
 
 .App {
+  max-height: 100vh;
+  border: 2px blue dotted;
   text-align: center;
 }
 
 .App-header {
+  z-index: 1;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
   background-color: #f5f5f5;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #222;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  pointer-events: none;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .footer {
