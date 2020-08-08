@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from './components/Table.js';
 import SearchBar from './components/SearchBar.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 import './App.css';
 import data from './data/example.json';
 
@@ -19,7 +21,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <header className="App-header"/>
+        <Header />
         <Container>
           <Row className="mt-2 mb-2">
             <Col>
@@ -35,6 +37,7 @@ class App extends React.Component{
             </Col>
           </Row>
         </Container>
+        <Footer/>
       </div>
     )
   };
