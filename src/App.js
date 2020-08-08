@@ -25,13 +25,13 @@ class App extends React.Component{
             <Col>
               <SearchBar
                 handleInputChange={this.handleInputChange}
-                searchTerm={this.state.searchTearm}  
+                searchTerm={this.state.searchTerm}  
               />
             </Col>
           </Row>
           <Row className="mt-2 mb-2">
             <Col>
-              <Table data={data} searchTerm={this.state.searchTearm}/>
+              <Table data={data} searchTerm={this.state.searchTerm}/>
             </Col>
           </Row>
         </Container>

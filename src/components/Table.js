@@ -50,10 +50,28 @@ class Table extends React.Component {
     });
   }
 
+  includesTerm(obj, term){
+    if(term.length < 1) return true;
+    let included = false;
+    const keys = Object.keys(obj);
+    keys.forEach((key) => {
+      if(obj[key] !== null && obj[key].toString().toLowerCase().includes(term.toLowerCase())){
+        included = true;
+      }
+    })
+    return included;
+  }
+
+  filterByTerm(term){
+    return this.state.data
+      .filter((row) => this.includesTerm(row, term))
+      .map((datum, index) => (
+        <Row key={`${datum.role}-${datum.id}`} datum={datum} index={index} header={false}/>
+      ));
+  }
+
   render(){
-    const rows = this.state.data.map((datum, index) => (
-      <Row key={`${datum.role}-${datum.id}`} datum={datum} index={index} header={false}/>
-    ));
+    const rows = this.filterByTerm(this.props.searchTerm);
 
     return (
       <Tables striped bordered hover variant="dark">

@@ -24,6 +24,7 @@ class Row extends React.Component{
       </tr>
     )
   }
+  
   render(){
     if(this.props.header){
       return (this.createHeader(this.props.datum))
