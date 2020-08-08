@@ -6,24 +6,17 @@ body {
   background-color: #282c34;
 }
 
-.wrapper{
-  margin-top: 8em;
-  overflow:auto;
-  padding-bottom: 5em;
-}
-
 .App {
   max-height: 100vh;
-  border: 2px blue dotted;
   text-align: center;
 }
 
 .App-header {
   z-index: 1;
   font-size: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -44,8 +37,27 @@ body {
   }
 }
 
+.search{
+  width: 59%;
+  padding:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .search{
+    width: 100%;
+  }
+}
+
+.wrapper{
+  margin-top: 8em;
+  overflow: auto;
+  padding-bottom: 5em;
+}
+
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */

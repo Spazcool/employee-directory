@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from './components/Table.js';
-import SearchBar from './components/SearchBar.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import './App.css';
@@ -21,16 +20,11 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <Header />
+        <Header
+          handleInputChange={this.handleInputChange}
+          searchTerm={this.state.searchTerm}  
+        />
         <Container className="wrapper">
-          <Row className="mt-2 mb-2">
-            <Col>
-              <SearchBar
-                handleInputChange={this.handleInputChange}
-                searchTerm={this.state.searchTerm}  
-              />
-            </Col>
-          </Row>
           <Row className="mt-2 mb-2">
             <Col>
               <Table data={data} searchTerm={this.state.searchTerm}/>

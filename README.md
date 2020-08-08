@@ -1,8 +1,6 @@
 <!-- todo 
-* arrows on sorted column
 * text highlighting on filter
 * flip icons on hover 
-* center table
 -->
 
 # Employee Directory

@@ -7,30 +7,19 @@ class Table extends React.Component {
   state = {
     data : this.props.data,
     sorted: {
-      col: null,
-      dir: 'descending',
+      col: 'id',
+      dir: 'ascending',
     }
   };  
 
   sortByCol(col){
-    let att;
-    switch(col){
-      case 'Office #':
-        att = 'officeNumber';
-        break;
-      case 'Github Account':
-        att = 'github';
-        break;
-      default:
-        att = col.toLowerCase();
-    }
-
+    let att = col.toLowerCase();
     const dir = this.state.sorted.col 
       ? (this.state.sorted.dir === 'ascending' ? 'descending' : 'ascending')
       : 'descending';
-// TODO OFFICENUMBER IS STILL BUGGING OUT
+
     const sortedData = this.state.data.sort((a, b) => {
-      if(a[att] === undefined || typeof a[att] === "number"){
+      if(a[att] === null || typeof a[att] === "number"){
         return (a[att] > b[att]) ? 1 : - 1;
       }else{
         return (a[att].toLowerCase() > b[att].toLowerCase()) ? 1 : - 1
@@ -66,7 +55,7 @@ class Table extends React.Component {
     return this.state.data
       .filter((row) => this.includesTerm(row, term))
       .map((datum, index) => (
-        <Row key={`${datum.role}-${datum.id}`} datum={datum} index={index} header={false}/>
+        <Row key={`${datum.role}-${datum.id}`} datum={datum} index={index} header={false} term={term}/>
       ));
   }
 
@@ -78,6 +67,8 @@ class Table extends React.Component {
         <thead>
           <Row
             datum={Object.keys(this.state.data[0])}
+            sortBy={this.state.sorted.col}
+            sortDir={this.state.sorted.dir}
             header={true}
             onClick={(event) => this.sortByCol(event)}/>
         </thead>
