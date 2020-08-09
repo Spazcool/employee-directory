@@ -9,7 +9,7 @@ class SearchBar extends React.Component{
     return (
       <InputGroup className="mb-3 search">
         <InputGroup.Prepend>
-          <InputGroup.Text id="inputGroup-sizing-default"><FaSearch/></InputGroup.Text>
+          <InputGroup.Text id="inputGroup-sizing-default"><FaSearch className="flip"/></InputGroup.Text>
         </InputGroup.Prepend>
         <FormControl
           value={this.props.searchTerm}

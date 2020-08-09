@@ -18,8 +18,28 @@ class Row extends React.Component{
   }
 
   highlightText(text, highlight){
-    console.log(highlight)
-    return text;
+    const _highlight = highlight;
+    const _text = text === null ? '' : text.toString();
+    const start = _text.indexOf(_highlight);
+    let highlighted;
+
+    if(start !== -1 && highlight.length > 0){
+      let finish = start + _highlight.length;
+      let beginning = _text.substring(0, start);
+      let middle = _text.substring(start, finish);
+      let end = _text.substring(finish, _text.length);
+      
+      highlighted = 
+        <span>
+          <span>{beginning}</span>
+          <span className='highlighted'>{middle}</span>
+          <span>{end}</span>
+        </span>;
+    }else{
+      highlighted = text;
+    }
+  
+    return highlighted;
   }
 
   displayArrow(){
@@ -28,7 +48,7 @@ class Row extends React.Component{
 
   createHeader(list){
     const cells = list.map((item) => (
-      <th key={`${item}-header`}>
+      <th key={`${item}-header`} className="hovered">
         {item.toUpperCase()}
         {item === this.props.sortBy ? this.displayArrow() : ''}
       </th>

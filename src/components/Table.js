@@ -44,7 +44,7 @@ class Table extends React.Component {
     let included = false;
     const keys = Object.keys(obj);
     keys.forEach((key) => {
-      if(obj[key] !== null && obj[key].toString().toLowerCase().includes(term.toLowerCase())){
+      if(obj[key] !== null && obj[key].toString().includes(term)){
         included = true;
       }
     })

@@ -1,18 +1,9 @@
-<!-- todo 
-* text highlighting on filter
-* flip icons on hover 
--->
-
 # Employee Directory
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
-
-As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
-
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+A simple demo app of an employee directory, including the ability to filter & sort the available data. A user can view an entire employee directory at once, allowing quick access to their desired information. Built with React, this app demonstrates its core ideas: breaking the UI into components, managing component state, and responding to user events.
 
 <p align="center">
-   <img width="70%" height="300vh" src="./public/images/desktop.gif">
-   <img width="20%" height="300vh" src="./public/images/mobile.gif">
+  <img width="70%" height="300vh" src="./public/images/desktop.gif">
+  <img width="20%" height="300vh" src="./public/images/mobile.gif">
 </p>
 
 ## Getting Started
@@ -32,6 +23,7 @@ No installation required.
 * JS & React
 * HTML
 * CSS & ReactBootstrap
+* ReactIcons
 
 ## Authors
 

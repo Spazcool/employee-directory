@@ -7,7 +7,9 @@ class Footer extends React.Component{
     return(
       <footer className="footer">
         <div className="container">
-          <span className="text-muted"><FaCode/> with <FaHeart/> by <a href="http://www.spazcool.com">Douglas Wright</a></span>
+          <span className="text-muted">
+            <FaCode className="flip"/> with <FaHeart className="flip"/> by <a href="http://www.spazcool.com">Douglas Wright</a>
+          </span>
         </div>
       </footer>
     )
